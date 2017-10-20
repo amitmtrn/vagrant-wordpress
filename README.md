@@ -1,5 +1,7 @@
-Vagrant LAMP
+Vagrant Wordpress
 ============
+
+forked from https://github.com/mattandersen/vagrant-lamp
 
 Want to test a new web app but don't want to affect your current Apache / MySQL / PHP system?
 Applications like MAMP are great, but they don't make it easy to maintain multiple, separate
@@ -50,6 +52,7 @@ Technical Details
 * XDebug
 * PHPUnit 4.8
 * Composer
+* phpmyadmin
 
 We are using the base Ubuntu 14.04 box from Vagrant. If you don't already have it downloaded
 the Vagrantfile has been configured to do it for you. This only has to be done once
@@ -61,3 +64,8 @@ And like any other vagrant file you have SSH access with
 ```
 $ vagrant ssh
 ```
+
+##### Wordpress
+
+username: admin
+password: admin
