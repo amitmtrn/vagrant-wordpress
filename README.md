@@ -24,11 +24,10 @@ Usage
 
 ### Startup
 
-1. Download one of the releases available [https://github.com/mattandersen/vagrant-lamp/releases](https://github.com/mattandersen/vagrant-lamp/releases)
-2. Extract the ZIP file.
-3. From the command-line:
+1. `git clone https://github.com/amitmtrn/vagrant-wordpress.git`
+2. From the command-line:
 ```
-$ cd vagrant-lamp-release
+$ cd vagrant-wordpress
 $ vagrant up
 ```
 That is pretty simple.
@@ -36,10 +35,10 @@ That is pretty simple.
 ### Connecting
 
 #### Apache
-The Apache server is available at <http://localhost:8888>
+The Apache server is available at <http://192.168.33.11/>
 
 #### MySQL
-Externally the MySQL server is available at port 8889, and when running on the VM it is available as a socket or at port 3306 as usual.
+Externally the MySQL server is available at 192.168.33.11/3306 as usual.
 Username: root
 Password: root
 
