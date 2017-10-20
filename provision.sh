@@ -114,7 +114,13 @@ mysql_go() {
 	# Install MySQL
 	echo "mysql-server mysql-server/root_password password root" | debconf-set-selections
 	echo "mysql-server mysql-server/root_password_again password root" | debconf-set-selections
-	apt-get -y install mysql-client mysql-server
+	echo "phpmyadmin phpmyadmin/dbconfig-install boolean true" | debconf-set-selections
+	echo "phpmyadmin phpmyadmin/app-password-confirm password root" | debconf-set-selections
+	echo "phpmyadmin phpmyadmin/mysql/admin-pass password root" | debconf-set-selections
+	echo "phpmyadmin phpmyadmin/mysql/app-pass password root" | debconf-set-selections
+	echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none" | debconf-set-selections
+
+	apt-get -y install mysql-client mysql-server phpmyadmin
 
 	sed -i "s/bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" ${mysql_config_file}
 
